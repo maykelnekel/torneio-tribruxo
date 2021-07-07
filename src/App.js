@@ -6,19 +6,19 @@ function App() {
   const [students, setStudents] = useState([]);
   const [mentors, setMentors] = useState([]);
   
-  function handleGetStudents (value) {
+  function handleGetStudents (value, state) {
     fetch(`http://hp-api.herokuapp.com/api/characters/${value}`)
     .then((res) => res.json())
-    .then((res) => setStudents(res))
+    .then((res) => state(res))
     .catch((error) => console.log(error));
   }
   useEffect(() => {
-    handleGetStudents('students');
-    handleGetStudents('staff');
+    handleGetStudents('students', setStudents);
+    handleGetStudents('staff', setMentors);
   }, []);
     
-  // console.log(students)
-  // console.log(mentors)
+  console.log(students)
+  console.log(mentors)
 
   return (
     <main className="container">

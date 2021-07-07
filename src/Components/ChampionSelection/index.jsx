@@ -6,17 +6,30 @@ import MentorCard from "../MentorCard"
 function ChampionSelection ({ students, mentors }) {
     const [pickedStudents, setPickedStudents] = useState([]);
     const [pickedMentors, setPickedMentors] = useState([]);
+    const studentsLength = students.length
+    const mentorsLength = mentors.length
+    const randomNumber = (value) => Math.floor(Math.random() * value)
 
-    const randomNumber = (array) => Math.floor(Math.random() * array.length)
 
-    const randomChoice = (array, setArray) => {
-        array.map((element, index) => {
-            ( randomNumber(array)
+    const filter = () => {}
+    
+    const addStudents = () => {
+        const output = []
+        for (let i = 0; i < 3; i++) {
+            const number = randomNumber(studentsLength)
+            output.push(students[number])
+        }
+        return setPickedStudents(output)
+    }
+    
+    const addMentors = () => {
+        const output = []
+        for (let i = 0; i < 3; i++) {
+            const number = randomNumber(mentorsLength)
 
-            )
-
-        })
-            
+            output.push(mentors[number])
+        }
+        return setPickedMentors(output)
     }
 
     return (
@@ -26,7 +39,8 @@ function ChampionSelection ({ students, mentors }) {
                     pickedStudents = {pickedStudents}
                 />
             </div>
-            <button>Revelar Campeões</button>
+            <button onClick={addStudents}>Revelar Campeões</button>
+            {console.log(pickedStudents)}
         </div>
     )
 }
