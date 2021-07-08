@@ -3,8 +3,7 @@ import './style.css'
 
 function StudentCard ({ pickedStudents, pickedMentors}) {
     const age = (value) => value === '' ? 'desconhecido' : 1994 - value
-
-    console.log(pickedStudents)
+    
     return (
         <div className = 'container-cards'>
             {pickedStudents.map((item, index) => 
