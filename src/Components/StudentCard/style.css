@@ -1,0 +1,24 @@
+.container-cards {
+    display: flex;
+}
+.student-card,
+.mentor-card{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.mentor-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.student-img {
+    width: 10rem;
+    height: 13rem;
+}
+.mentor-img {
+    width: 8rem;
+    height: 11rem;
+}

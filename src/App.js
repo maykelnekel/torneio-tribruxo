@@ -17,9 +17,6 @@ function App() {
     handleGetStudents('staff', setMentors);
   }, []);
     
-  console.log(students)
-  console.log(mentors)
-
   return (
     <main className="container">
       <ChampionSelection
