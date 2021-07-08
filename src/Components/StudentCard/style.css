@@ -13,12 +13,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 1rem;
 }
 .student-img {
     width: 10rem;
     height: 13rem;
 }
 .mentor-img {
-    width: 8rem;
-    height: 11rem;
+    width: 6rem;
+    height: 8rem;
 }

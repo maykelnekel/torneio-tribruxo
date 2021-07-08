@@ -17,13 +17,16 @@ function ChampionSelection ({ students, mentors }) {
         let number = randomNumber(studentsLength);
         output.push(students[number])
         comparis.push(output[0].name)
+        comparis.push(output[0].house)
 
         for (let i = 0; i < 2; i++) {
             number = randomNumber(studentsLength);
             const studentsName = students[number].name
-            if ( !comparis.includes(studentsName) ) {
+            const studentsHouse = students[number].house
+            if ( !comparis.includes(studentsName) && !comparis.includes(studentsHouse)) {
                 output.push(students[number])
                 comparis.push(studentsName)
+                comparis.push(studentsHouse)
             } else { i-- } 
         }
         return setPickedStudents(output)
@@ -56,9 +59,7 @@ function ChampionSelection ({ students, mentors }) {
             <div className= 'selected-champions'>
                 <StudentCard
                     pickedStudents = {pickedStudents}
-                    addStudents = {addStudents}
                     pickedMentors = {pickedMentors}
-                    addMentors = {addMentors}
                 />
             </div>
             <div>
