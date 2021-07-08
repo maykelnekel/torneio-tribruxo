@@ -7,7 +7,7 @@ function App() {
   const [mentors, setMentors] = useState([]);
   
   function handleGetStudents (value, state) {
-    fetch(`http://hp-api.herokuapp.com/api/characters/${value}`)
+    fetch(`https://hp-api.herokuapp.com/api/characters/${value}`)
     .then((res) => res.json())
     .then((res) => state(res))
     .catch((error) => console.log(error));
