@@ -1,4 +1,4 @@
-
+import './style.css'
 import { useState } from "react";
 import StudentCard from "../StudentCard"
 
@@ -62,7 +62,7 @@ function ChampionSelection ({ students, mentors }) {
                     pickedMentors = {pickedMentors}
                 />
             </div>
-            <div>
+            <div className = 'revel-button'>
                 <button onClick={generateParty}>Revelar Campeões</button>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import './style.css'
 
+
 function StudentCard ({ pickedStudents, pickedMentors}) {
     const age = (value) => value === '' ? 'desconhecido' : 1994 - value
 
@@ -26,9 +27,7 @@ function StudentCard ({ pickedStudents, pickedMentors}) {
                         </p>
                     </div>  
                 </div>
-                
             )}
-           
         </div>
     )
 }
