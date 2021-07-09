@@ -19,8 +19,8 @@ function StudentCard ({ pickedStudents, pickedMentors}) {
     return (
         <div className = 'container' >
             {pickedStudents.map((item, index) =>
-            <div className = "container-cards">
-                <div className='student-card' key = {`${index}student`} data-tilt data-tilt-scale="1.1">
+            <div className = "container-cards" key = {index}>
+                <div className='student-card'  data-tilt data-tilt-scale="1.1">
                     <div className='student-card-intern'> 
                         <h4 className = 'student-title'>Campeão</h4>
                         <img className = 'student-img' src={item.image} alt = {item.name}/>
@@ -29,7 +29,7 @@ function StudentCard ({ pickedStudents, pickedMentors}) {
                         <p className = 'student-house'>{item.house}</p>
                     </div>
                 </div>
-                <div className='mentor-card' key = {`${index}mentor`} data-tilt data-tilt-scale="1.1">
+                <div className='mentor-card' data-tilt data-tilt-scale="1.1">
                     <div className='mentor-card-intern'>
                         <h4 className = 'mentor-title'>Mentor</h4>
                         <img className = 'mentor-img' src={pickedMentors[index].image} alt = {item.name}/>

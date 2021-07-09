@@ -17,12 +17,16 @@ function App() {
     handleGetStudents('students', setStudents);
     handleGetStudents('staff', setMentors);
   }, []);
+  
     
   return (
     <main className="container">
       <ChampionSelection
         students = {students}
         mentors = {mentors}
+        setStudents = {setStudents}
+        setMentors = {setMentors}
+        handleGetStudents = {handleGetStudents}
       />
     </main>
   );

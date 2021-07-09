@@ -2,7 +2,7 @@ import './style.css'
 import { useState } from "react";
 import StudentCard from "../StudentCard"
 
-function ChampionSelection ({ students, mentors }) {
+function ChampionSelection ({ students, mentors, setStudents, setMentors, handleGetStudents }) {
 
     const [pickedStudents, setPickedStudents] = useState([]);
     const [pickedMentors, setPickedMentors] = useState([]);
@@ -50,6 +50,8 @@ function ChampionSelection ({ students, mentors }) {
         return setPickedMentors(output)
     }
     const generateParty = () => {
+        handleGetStudents('students', setStudents);
+        handleGetStudents('staff', setMentors);
         addStudents()
         addMentors()
     }
