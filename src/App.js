@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import ChampionSelection from './Components/ChampionSelection';
 
+
 function App() {
   const [students, setStudents] = useState([]);
   const [mentors, setMentors] = useState([]);

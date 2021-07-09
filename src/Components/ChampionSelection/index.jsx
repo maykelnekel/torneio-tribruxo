@@ -2,8 +2,8 @@ import './style.css'
 import { useState } from "react";
 import StudentCard from "../StudentCard"
 
-
 function ChampionSelection ({ students, mentors }) {
+
     const [pickedStudents, setPickedStudents] = useState([]);
     const [pickedMentors, setPickedMentors] = useState([]);
     const studentsLength = students.length
