@@ -1,13 +1,15 @@
 import './style.css'
 import { useState } from "react";
-import StudentCard from "../StudentCard"
+
+import InitalPage from '../InitialPage';
+import ChampionsPage from '../ChampionsPage';
 
 function ChampionSelection ({ students, mentors, setStudents, setMentors, handleGetStudents }) {
-
     const [pickedStudents, setPickedStudents] = useState([]);
     const [pickedMentors, setPickedMentors] = useState([]);
-    const studentsLength = students.length
-    const mentorsLength = mentors.length
+    const [firstTurn, setFirstTurn] = useState(true);
+    const studentsLength = students.length;
+    const mentorsLength = mentors.length;
 
     const randomNumber = (value) => Math.floor(Math.random() * value)
     
@@ -33,39 +35,52 @@ function ChampionSelection ({ students, mentors, setStudents, setMentors, handle
     }
     
     const addMentors = () => {
-        const output = []
-        const comparis = []
+        const output = [];
+        const comparis = [];
         let number = randomNumber(mentorsLength);
-        output.push(mentors[number])
-        comparis.push(output[0].name)
+        output.push(mentors[number]);
+        comparis.push(output[0].name);
 
         for (let i = 0; i < 2; i++) {
             number = randomNumber(mentorsLength);
-            const mentorsName = mentors[number].name
+            const mentorsName = mentors[number].name;
             if ( !comparis.includes(mentorsName) ) {
-                output.push(mentors[number])
-                comparis.push(mentorsName)
+                output.push(mentors[number]);
+                comparis.push(mentorsName);
             } else { i-- } 
         }
-        return setPickedMentors(output)
+        return setPickedMentors(output);
     }
     const generateParty = () => {
+        setFirstTurn(false);
         handleGetStudents('students', setStudents);
         handleGetStudents('staff', setMentors);
-        addStudents()
-        addMentors()
+        addStudents();
+        addMentors();
+        
     }
 
     return (
         <div className='champion-selection'>
             <div className= 'selected-champions'>
-                <StudentCard
-                    pickedStudents = {pickedStudents}
-                    pickedMentors = {pickedMentors}
-                />
+                { firstTurn ?
+                    <InitalPage/>
+                    :
+                    <ChampionsPage
+                        pickedStudents = {pickedStudents}
+                        pickedMentors = {pickedMentors}
+                    />
+                }
+                
             </div>
             <div className = 'revel-button'>
-                <button onClick={generateParty}>Revelar Campeões</button>
+                <button onClick={generateParty}>
+                    { firstTurn ?
+                    'Revelar Campeões'
+                    :
+                    'Relevar Novos Campeões'
+                    }
+                </button>
             </div>
         </div>
     )

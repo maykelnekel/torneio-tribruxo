@@ -2,8 +2,10 @@ import './style.css'
 import VanillaTilt from 'vanilla-tilt';
 
 
-function StudentCard ({ pickedStudents, pickedMentors}) {
+function StudentCard ({ pickedStudents}) {
     
+
+
     VanillaTilt.init(document.querySelectorAll(".student-card"), {
 		max: 25,
 		speed: 350
@@ -15,10 +17,11 @@ function StudentCard ({ pickedStudents, pickedMentors}) {
 	});;
 
     const age = (value) => value === '' ? 'Idade desconhecida' : 1994 - value + ' anos'
-    
+    console.log(pickedStudents.pickedStudentsArray)
     return (
         <div className = 'container' >
-            {pickedStudents.map((item, index) =>
+            
+            {pickedStudents.pickedStudents.map((item, index) =>
             <div className = "container-cards" key = {index}>
                 <div className='student-card'  data-tilt data-tilt-scale="1.1">
                     <div className='student-card-intern'> 
@@ -32,13 +35,13 @@ function StudentCard ({ pickedStudents, pickedMentors}) {
                 <div className='mentor-card' data-tilt data-tilt-scale="1.1">
                     <div className='mentor-card-intern'>
                         <h4 className = 'mentor-title'>Mentor</h4>
-                        <img className = 'mentor-img' src={pickedMentors[index].image} alt = {item.name}/>
-                        <h3 className = 'mentor-name'>{pickedMentors[index].name}</h3>                   
-                        <p className = 'mentor-house'>{pickedMentors[index].house === ''
+                        <img className = 'mentor-img' src={pickedStudents.pickedMentors[index].image} alt = {item.name}/>
+                        <h3 className = 'mentor-name'>{pickedStudents.pickedMentors[index].name}</h3>                   
+                        <p className = 'mentor-house'>{pickedStudents.pickedMentors[index].house === ''
                                     ?
                                     'Casa desconhecida'
                                     :
-                                    pickedMentors[index].house
+                                    pickedStudents.pickedMentors[index].house
                                 }
                         </p>
                     </div>
