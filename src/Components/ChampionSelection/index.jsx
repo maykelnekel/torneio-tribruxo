@@ -52,6 +52,8 @@ function ChampionSelection ({ students, mentors, setStudents, setMentors, handle
         return setPickedMentors(output);
     }
     const generateParty = () => {
+        document.body.scrollTo({top: 0, behavior: 'smooth'});
+        document.documentElement.scrollTo({top: 0, behavior: 'smooth'});
         setFirstTurn(false);
         handleGetStudents('students', setStudents);
         handleGetStudents('staff', setMentors);
@@ -59,6 +61,10 @@ function ChampionSelection ({ students, mentors, setStudents, setMentors, handle
         addMentors();
         
     }
+    const firstTurnTrue = () => {
+        if (!firstTurn) {
+            return setFirstTurn(true)
+        }}
 
     return (
         <div className='champion-selection'>
@@ -69,6 +75,7 @@ function ChampionSelection ({ students, mentors, setStudents, setMentors, handle
                     <ChampionsPage
                         pickedStudents = {pickedStudents}
                         pickedMentors = {pickedMentors}
+                        firstTurnTrue = {firstTurnTrue}
                     />
                 }
                 
@@ -78,9 +85,10 @@ function ChampionSelection ({ students, mentors, setStudents, setMentors, handle
                     { firstTurn ?
                     'Revelar Campeões'
                     :
-                    'Relevar Novos Campeões'
+                    'Novos Campeões'
                     }
                 </button>
+                
             </div>
         </div>
     )

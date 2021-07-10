@@ -17,7 +17,6 @@ function StudentCard ({ pickedStudents}) {
 	});;
 
     const age = (value) => value === '' ? 'Idade desconhecida' : 1994 - value + ' anos'
-    console.log(pickedStudents.pickedStudentsArray)
     return (
         <div className = 'container' >
             

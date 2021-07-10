@@ -20,7 +20,7 @@ function App() {
   
     
   return (
-    <main className="container">
+    <main className="container-main">
       <ChampionSelection
         students = {students}
         mentors = {mentors}
