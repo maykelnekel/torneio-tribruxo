@@ -1,3 +1,31 @@
-h2, p {
-    color: tan;
+:root {
+    font-family: 'Times New Roman', Times, serif;
+    --color-1: #99713c;
+    --color-2: rgb(28,28,28);
+    --color-3:rgb(54, 54, 54);
+    
+}
+
+.champions-page h2 {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-1);
+
+}
+.champions-page .texto {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-1);
+
+}
+.champions-page .ponto {
+    color: var(--color-1);
+    text-align: center;
+    font-size: 7rem;
+    font-weight: bolder;
+    line-height: 21vh;
 }

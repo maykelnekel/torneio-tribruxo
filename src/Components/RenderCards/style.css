@@ -5,6 +5,11 @@
     --color-3:rgb(54, 54, 54);
     
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .container-cards {
     position: relative;
     transform-style: preserve-3d;
@@ -12,6 +17,14 @@
     flex-direction: column;
     align-items: center;
     color: var(--color-1);
+    padding-bottom: 2rem;
+    width: 80%;
+    padding-top: 2rem;
+}
+.container-cards:nth-child(1),
+.container-cards:nth-child(2) {
+    border-bottom: 1px solid var(--color-1);
+    
 }
 .student-card,
 .mentor-card{
@@ -46,16 +59,6 @@
     background-color: var(--color-2);
     
 }
-/* .student-title::after, .student-age::after {
-    transform: translateZ(5px);
-}
-.student-name::after, .student-house::after {
-    transform: translateZ(5px)
-}
-.student-img::after {
-    transform: translateZ(5px)
-} */
-
 .student-title, .student-age {
     transform: translateZ(10px);
 }
