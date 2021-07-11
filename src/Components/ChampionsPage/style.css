@@ -5,65 +5,33 @@
     --color-3:#363636;
     --color-4: #d6d6d6c2;
 }
+
 .champions-page {
+   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.champions-page h2 {
-    margin-top: 1rem;
-    font-size: 2.8rem;
-    text-align: center;
-    text-transform: uppercase;
+.initial-page-button {
     color: var(--color-1);
-
-
-}
-.champions-page .text {
-    margin-top: 1rem;
-    font-size: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--color-1);
-
-
-}
-.champions-page h2,
-.champions-page .text {
-    padding: 1rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    padding-left: 4rem;
     font-weight: 600;
-    background-color: var(--color-2);
-    border: 1px solid var(--color-1);
     box-shadow: 0px 0px 1px 5px var(--color-3);
     border-radius: 5px;
-    max-width: 80%;
-}
-.champions-page .seta,
-.champions-page .ponto {
-   
-    color: var(--color-1);
-    font-size: 7rem;
-    font-weight: bolder;
-    line-height: 21vh;
-    margin: 4vh;
-}
-.champions-page .ponto {
-    width:7rem;
-    height: 7rem;
-    background-image: url(/src/img/icons8-brown-circle-48.png);
+    width: 13rem;
+    margin-bottom:1rem;
+    background-color: var(--color-2);
+    border: 1px solid var(--color-1);
+
+    background-image: url(/src/img/icons8-hogwarts-50.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 2rem;
+    background-size: 3rem;
+    background-position: 15% 50%;
+    
 }
-.champions-page .seta {
-    width:7rem;
-    height: 7rem;
-    background-image: url(/src/img/icons8-deathly-hallows-64.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 4rem;
-} 
 
 @media only screen and (min-width: 700px) {
     .champions-page {

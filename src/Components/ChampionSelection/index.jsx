@@ -79,9 +79,7 @@ function ChampionSelection ({ students, mentors, setStudents, setMentors, handle
                     />
                 }
                 
-            </div>
-            <div className = 'revel-button'>
-                <button onClick={generateParty}>
+                <button className='revel-button' onClick={generateParty}>
                     { firstTurn ?
                     'Revelar Campeões'
                     :
@@ -89,7 +87,9 @@ function ChampionSelection ({ students, mentors, setStudents, setMentors, handle
                     }
                 </button>
                 
+            
             </div>
+            
         </div>
     )
 }

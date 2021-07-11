@@ -3,8 +3,6 @@ import VanillaTilt from 'vanilla-tilt';
 
 
 function StudentCard ({ pickedStudents}) {
-    
-
 
     VanillaTilt.init(document.querySelectorAll(".student-card"), {
 		max: 25,

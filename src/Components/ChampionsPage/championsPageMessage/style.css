@@ -1,0 +1,74 @@
+:root {
+    font-family: 'Times New Roman', Times, serif;
+    --color-1: #99713c;
+    --color-2: #1c1c1c;
+    --color-3:#363636;
+    --color-4: #d6d6d6c2;
+}
+.champions-page-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.champions-page-message h2 {
+    margin-top: 1rem;
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-1);
+
+
+}
+.champions-page-message .text {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-1);
+
+
+}
+.champions-page-message h2,
+.champions-page-message .text {
+    padding: 1rem;
+    font-weight: 600;
+    background-color: var(--color-2);
+    border: 1px solid var(--color-1);
+    box-shadow: 0px 0px 1px 5px var(--color-3);
+    border-radius: 5px;
+    max-width: 80%;
+}
+.champions-page-message .seta,
+.champions-page-message .ponto {
+   
+    color: var(--color-1);
+    font-size: 7rem;
+    font-weight: bolder;
+    line-height: 21vh;
+    margin: 4vh;
+}
+.champions-page-message .ponto {
+    width:7rem;
+    height: 7rem;
+    background-image: url(/src/img/icons8-brown-circle-48.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2rem;
+}
+.champions-page-message .seta {
+    width:7rem;
+    height: 7rem;
+    background-image: url(/src/img/icons8-deathly-hallows-64.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4rem;
+} 
+
+
+@media only screen and (min-width: 700px) {
+    .champions-page-message {
+        padding-top: 3rem;
+
+    }
+}

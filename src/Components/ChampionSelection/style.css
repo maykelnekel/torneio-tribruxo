@@ -1,9 +1,9 @@
-.revel-button {
+.selected-champions {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.revel-button button {
+.revel-button{
     color: var(--color-1);
     font-size: 1.5rem;
     padding: 0.5rem;
